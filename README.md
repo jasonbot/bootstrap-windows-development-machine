@@ -2,7 +2,7 @@
 
 A very opinionated set of scripts to get a Windows 11 machine up and running from zero
 
-Open a Powershell admin box and do this:
+Open a Powershell admin terminal and do this:
 
 ```powershell
 Set-ExecutionPolicy Unrestricted
