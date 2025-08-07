@@ -1,3 +1,5 @@
+Write-Output "Setting up various developer apps"
+
 # Always put git in c:\git\ as a special utility
 winget install --silent -e --id Git.Git --location c:\git
 
