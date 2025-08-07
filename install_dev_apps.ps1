@@ -31,6 +31,11 @@ foreach ($package in $packages) {
     winget install --silent -e --id $package
 }
 
+$NvmVersion = "v22.13.1"
+
+nvm install $NvmVersion
+nvm use $NvmVersion
+
 # These are the tools required to compile canvas in your nvm env
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP/gtk-devenv.zip"
 Expand-Archive "$env:TEMP/gtk-devenv.zip" -DestinationPath C:\GTK
