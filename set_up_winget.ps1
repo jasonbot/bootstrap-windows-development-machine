@@ -1,3 +1,5 @@
+Write-Output "Making sure Winget works"
+
 $progressPreference = 'silentlyContinue'
 Install-PackageProvider -Name NuGet -Force | Out-Null
 Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
