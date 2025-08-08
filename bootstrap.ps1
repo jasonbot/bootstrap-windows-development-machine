@@ -17,7 +17,6 @@ Get-ChildItem -Path "$BootstrapPath/jasonbot-bootstrap-windows-development-machi
 
 Set-Location $BootstrapPath
 
-
 Invoke-RestMethod https://github.com/pirafrank/zed_unofficial_win_builds/raw/refs/heads/main/install_or_update.ps1 -OutFile "$BootstrapPath/install_zed.ps1"
 
 .\install.ps1
