@@ -4,26 +4,28 @@ A very opinionated set of scripts to get a Windows 11 machine up and running fro
 
 Open a Powershell admin terminal and do this:
 
-# Average Case One-Shot
+## Average Case One-Shot
 
 ```powershell
 Set-ExecutionPolicy Unrestricted
 & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/jasonbot/bootstrap-windows-development-machine/refs/heads/main/bootstrap.ps1")))
 ```
 
-# You Work With Me
+## You Work With Me
 
 ```powershell
 Set-ExecutionPolicy Unrestricted
 & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/jasonbot/bootstrap-windows-development-machine/refs/heads/main/bootstrap.ps1"))) -IWorkHere
 ```
 
-# Installing on a VM
+## Installing on a VM
 
 ```powershell
 Set-ExecutionPolicy Unrestricted
 & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/jasonbot/bootstrap-windows-development-machine/refs/heads/main/bootstrap.ps1"))) -ThisIsAVM
 ```
+
+# Flags
 
 There are two flags you can send along!
 
