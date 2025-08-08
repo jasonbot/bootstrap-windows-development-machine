@@ -4,12 +4,12 @@ Write-Host "Setting up base build/run apps"
 
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.UI.Xaml.2.8
 winget install --skip-dependencies  --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.WindowsTerminal
+winget install Microsoft.WindowsTerminal --accept-package-agreements --accept-source-agreements --force --silent --disable-interactivity
 
 $packages = @(
     "Google.Chrome",
     "Mozilla.Firefox",
     "Microsoft.OpenSSH.Preview",
-    "Microsoft.WindowsTerminal",
     "Microsoft.VisualStudio.2019.BuildTools",
     "Microsoft.VisualStudio.2022.BuildTools",
     "Microsoft.VisualStudioCode",
