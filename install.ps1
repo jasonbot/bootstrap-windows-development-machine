@@ -1,11 +1,11 @@
 #Requires -RunAsAdministrator
 
-Write-Host "Here we go"
-
 param (
     [switch]$ThisIsAVM,
     [switch]$IWorkHere
 )
+
+Write-Host "Here we go"
 
 .\set_up_winget.ps1
 .\debloat.ps1
