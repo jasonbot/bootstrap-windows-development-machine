@@ -17,5 +17,8 @@ Get-ChildItem -Path "$env:TEMP/bootstrapdevmachine/jasonbot-bootstrap-windows-de
 
 Set-Location $BootstrapPath
 
+
+Invoke-RestMethod https://github.com/pirafrank/zed_unofficial_win_builds/raw/refs/heads/main/install_or_update.ps1 -OutFile "$BootstrapPath/install_zed.ps1"
+
 .\install.ps1
-Write-Output "Reember these scripts are all still available to you in: $BootstrapPath"
+Write-Output "Remember these scripts are all still available to you in: $BootstrapPath"

@@ -1,5 +1,7 @@
 Write-Output "Setting up base build/run apps"
 
+https://github.com/pirafrank/zed_unofficial_win_builds/raw/refs/heads/main/install_or_update.ps1
+
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.UI.Xaml.2.8
 winget install --skip-dependencies  --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.WindowsTerminal
 
@@ -13,6 +15,8 @@ $packages = @(
     "Microsoft.VisualStudioCode",
     "Microsoft.WindowsSDK",
     "CoreyButler.NVMforWindows",
+    "Rustlang.Rustup",
+    "GoLang.Go.Unstable",
     "Python.Python.3.13",
     "jqlang.jq",
     "MikeFarah.yq",
@@ -31,8 +35,8 @@ foreach ($package in $packages) {
 # Always put git in c:\git\ as a special location
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Git.Git --location c:\git
 
+# Set up nvm
 $NvmVersion = "v22.13.1"
-
 & "$env:LOCALAPPDATA\nvm\nvm.exe" install $NvmVersion
 & "$env:LOCALAPPDATA\nvm\nvm.exe" use $NvmVersion
 
