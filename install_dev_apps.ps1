@@ -1,3 +1,5 @@
+#Requires -RunAsAdministrator
+
 Write-Output "Setting up various developer apps"
 
 $packages = @(

@@ -1,3 +1,5 @@
+#Requires -RunAsAdministrator
+
 Write-Output "Setting up base build/run apps"
 
 https://github.com/pirafrank/zed_unofficial_win_builds/raw/refs/heads/main/install_or_update.ps1
