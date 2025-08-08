@@ -2,8 +2,6 @@
 
 Write-Host "Setting up base build/run apps"
 
-https://github.com/pirafrank/zed_unofficial_win_builds/raw/refs/heads/main/install_zed.ps1
-
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.UI.Xaml.2.8
 winget install --skip-dependencies  --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.WindowsTerminal
 
