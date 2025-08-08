@@ -1,6 +1,6 @@
 #Requires -RunAsAdministrator
 
-$BootstrapPath = "$env:TEMP/bootstrapdevmachine"
+$BootstrapPath = "$env:USERPROFILE/bootstrap-dev-machine"
 
 Write-Output "Setting up a developer machine: this script will live in $BootstrapPath"
 
@@ -18,3 +18,4 @@ Get-ChildItem -Path "$env:TEMP/bootstrapdevmachine/jasonbot-bootstrap-windows-de
 Set-Location $BootstrapPath
 
 .\install.ps1
+Write-Output "Reember these scripts are all still available to you in: $BootstrapPath"
