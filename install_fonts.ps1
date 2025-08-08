@@ -25,7 +25,7 @@ Remove-Item "$env:TEMP/inter.zip"
 Invoke-RestMethod https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip -OutFile "$env:TEMP/jetbrainsmono.zip"
 Expand-Archive "$env:TEMP/jetbrainsmono.zip" "$env:TEMP/jetbrainsmono"
 
-$FontList = Get-ChildItem -Path "$env:TEMP/jetbrainsmono" -Include ('*.fon', '*.otf', '*.ttc', '*.ttf') -Recurse
+$FontList = Get-ChildItem -Path "$env:TEMP/jetbrainsmono" -Include ('*.otf', '*.ttc', '*.ttf') -Recurse
 foreach ($Font in $FontList) {
     Install-Font -Font $Font
 }
