@@ -13,7 +13,7 @@ if (Test-Path $BootstrapPath) {
 Expand-Archive "$env:TEMP/bootstrapdevmachine.zip" $BootstrapPath
 Remove-Item "$env:TEMP/bootstrapdevmachine.zip"
 
-Get-ChildItem -Path "$env:TEMP/bootstrapdevmachine/jasonbot-bootstrap-windows-development-machine-*" -Recurse | Move-Item -Destination $BootstrapPath
+Get-ChildItem -Path "$BootstrapPath/jasonbot-bootstrap-windows-development-machine-*" -Recurse | Move-Item -Destination $BootstrapPath
 
 Set-Location $BootstrapPath
 
