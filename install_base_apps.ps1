@@ -1,6 +1,6 @@
 #Requires -RunAsAdministrator
 
-Write-Output "Setting up base build/run apps"
+Write-Host "Setting up base build/run apps"
 
 https://github.com/pirafrank/zed_unofficial_win_builds/raw/refs/heads/main/install_or_update.ps1
 
@@ -26,11 +26,12 @@ $packages = @(
     "cURL.cURL",
     "BurntSushi.ripgrep.MSVC",
     "GnuWin32.Grep",
-    "GnuWin32.Zip"
+    "GnuWin32.Zip",
+    "Amazon.AWSCLI"
 )
 
 foreach ($package in $packages) {
-    Write-Output "Installing $package..."
+    Write-Host "Installing $package..."
     winget install --accept-source-agreements --accept-package-agreements --silent -e --id $package
 }
 

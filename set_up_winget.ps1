@@ -1,4 +1,4 @@
-Write-Output "Making sure Winget works"
+Write-Host "Making sure Winget works"
 
 $progressPreference = 'silentlyContinue'
 Install-PackageProvider -Name NuGet -Force | Out-Null

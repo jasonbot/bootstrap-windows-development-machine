@@ -1,15 +1,13 @@
 #Requires -RunAsAdministrator
 
-Write-Output "Setting up various developer apps"
+Write-Host "Installing various work-related apps"
 
 $packages = @(
-    "Docker.DockerDesktop",
     "Twingate.Client",
-    "AgileBits.1Password",
-    "Amazon.AWSCLI"
+    "AgileBits.1Password"
 )
 
 foreach ($package in $packages) {
-    Write-Output "Installing $package..."
+    Write-Host "Installing $package..."
     winget install --accept-source-agreements --accept-package-agreements --silent -e --id $package
 }

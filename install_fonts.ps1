@@ -1,6 +1,6 @@
 #Requires -RunAsAdministrator
 
-Write-Output "Installing Inter and Jetbrains Mono"
+Write-Host "Installing Inter and Jetbrains Mono"
 
 function Install-Font {
     param (
