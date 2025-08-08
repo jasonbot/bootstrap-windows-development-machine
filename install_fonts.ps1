@@ -4,7 +4,7 @@ Write-Output "Installing Inter and Jetbrains Mono"
 
 function Install-Font {
     param (
-        [string]$Font
+        $Font
     )
     Write-Host 'Installing font -' $Font.BaseName
     Copy-Item $Font "C:\Windows\Fonts"
