@@ -3,7 +3,7 @@
 Write-Host "Setting up base build/run apps"
 
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.UI.Xaml.2.8
-winget install Microsoft.WindowsTerminal  --skip-dependencies --accept-package-agreements --accept-source-agreements --force --silent --disable-interactivity
+winget install Microsoft.WindowsTerminal --skip-dependencies --accept-package-agreements --accept-source-agreements --force --silent --disable-interactivity
 
 $packages = @(
     "Google.Chrome",
