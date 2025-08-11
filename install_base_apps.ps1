@@ -5,12 +5,18 @@ Write-Host "Setting up base build/run apps"
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.UI.Xaml.2.8
 winget install Microsoft.WindowsTerminal --skip-dependencies --accept-package-agreements --accept-source-agreements --force --silent --disable-interactivity
 
+# VS Code Build Tools
+winget install --accept-source-agreements --accept-package-agreements --silent --source winget --exact --id Microsoft.VisualStudio.2022.BuildTools --override "--passive --config $pwd/vscode-features.json"
+winget install --accept-source-agreements --accept-package-agreements --silent --source winget --exact --id Microsoft.WindowsSDK.10.0.26100
+winget install --accept-source-agreements --accept-package-agreements --silent --source winget --exact --id Microsoft.WindowsWDK.10.0.26100
+
 $packages = @(
     "Google.Chrome",
     "Mozilla.Firefox",
     "Microsoft.OpenSSH.Preview",
     "Microsoft.VisualStudioCode",
     "Microsoft.WindowsSDK",
+    "Microsoft.WindowsSDK.10.0.26100",
     "CoreyButler.NVMforWindows",
     "Rustlang.Rustup",
     "GoLang.Go.Unstable",
@@ -33,9 +39,6 @@ foreach ($package in $packages) {
 # Always put git in c:\git\ as a special location
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Git.Git --location c:\git
 
-# VS Code Build Tools
-winget install --source winget --exact --id  Microsoft.VisualStudio.2022.BuildTools --override "--passive --config $pwd/vscode-features.json"
-
 # Set up nvm
 $NvmVersion = "v22.13.1"
 & "$env:LOCALAPPDATA\nvm\nvm.exe" install $NvmVersion
@@ -45,4 +48,5 @@ $NvmVersion = "v22.13.1"
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP/gtk-devenv.zip"
 Expand-Archive "$env:TEMP/gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP/gtk-devenv.zip"
+
 
