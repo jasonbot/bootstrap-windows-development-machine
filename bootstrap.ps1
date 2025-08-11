@@ -25,4 +25,5 @@ Invoke-RestMethod https://github.com/pirafrank/zed_unofficial_win_builds/raw/ref
 
 .\install.ps1 -ThisIsAVM:$ThisIsAVM -IWorkHere:$IWorkHere
 Write-Host "These scripts are all in $BootstrapPath if you want to run them later."
-Restart-Computer
+
+Write-Host "Run the Restart-Computer command (type it in below) when all the installers are done."
