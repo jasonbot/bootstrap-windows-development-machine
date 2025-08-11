@@ -41,11 +41,10 @@ winget install --accept-source-agreements --accept-package-agreements --silent -
 $NvmVersion = "v22.13.1"
 & "$env:LOCALAPPDATA\nvm\nvm.exe" install $NvmVersion
 & "$env:LOCALAPPDATA\nvm\nvm.exe" use $NvmVersion
+# Node-gyp needs Python with distutils
+pip install setuptools
 
 # These are the tools required to compile canvas in your nvm env
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP/gtk-devenv.zip"
 Expand-Archive "$env:TEMP/gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP/gtk-devenv.zip"
-
-
-
