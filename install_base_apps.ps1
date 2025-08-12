@@ -15,7 +15,7 @@ $packages = @(
     "Microsoft.WindowsSDK.10.0.26100",
     "CoreyButler.NVMforWindows",
     "Rustlang.Rustup",
-    "GoLang.Go.Unstable",
+    "GoLang.Go",
     "Python.Python.3.13",
     "jqlang.jq",
     "MikeFarah.yq",
@@ -42,5 +42,6 @@ Start-Process powershell.exe -ArgumentList "-File .\sanity_check_build_env.ps1"
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP/gtk-devenv.zip"
 Expand-Archive "$env:TEMP/gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP/gtk-devenv.zip"
+
 
 
