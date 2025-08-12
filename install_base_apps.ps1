@@ -2,13 +2,11 @@
 
 Write-Host "Setting up base build/run apps"
 
-winget install --accept-source-agreements --accept-package-agreements --silent -e --id Microsoft.UI.Xaml.2.8
-winget install Microsoft.WindowsTerminal --skip-dependencies --accept-package-agreements --accept-source-agreements --force --silent --disable-interactivity
-
 # VS Code Build Tools
 winget install --accept-source-agreements --accept-package-agreements --silent --source winget --id Microsoft.VisualStudio.2022.Community --override "--passive --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --add Microsoft.VisualStudio.Component.Windows10SDK --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64 --add Microsoft.VisualStudio.Component.VC.Modules.x86.x64 --add Microsoft.VisualStudio.Component.VC.Llvm.ClangToolset --add Microsoft.VisualStudio.Component.VC.Llvm.Clang"
 
 $packages = @(
+    "Microsoft.WindowsTerminal",
     "Google.Chrome",
     "Mozilla.Firefox",
     "Microsoft.OpenSSH.Preview",
@@ -44,4 +42,5 @@ Start-Process powershell.exe -ArgumentList "-File .\sanity_check_build_env.ps1"
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP/gtk-devenv.zip"
 Expand-Archive "$env:TEMP/gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP/gtk-devenv.zip"
+
 
