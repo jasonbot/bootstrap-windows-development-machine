@@ -11,7 +11,7 @@ Set-ExecutionPolicy Bypass
 & ([scriptblock]::Create((irm "https://raw.githubusercontent.com/jasonbot/bootstrap-windows-development-machine/refs/heads/main/bootstrap.ps1")))
 ```
 
-## You Work With Me
+## You Work With Me _On An Employer-Provisioned Machine_
 
 ```powershell
 Set-ExecutionPolicy Bypass
