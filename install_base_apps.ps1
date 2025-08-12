@@ -17,6 +17,8 @@ $packages = @(
     "Rustlang.Rustup",
     "GoLang.Go",
     "Python.Python.3.13",
+    "astral-sh.uv",
+    "RubyInstallerTeam.Ruby.3.4",
     "jqlang.jq",
     "MikeFarah.yq",
     "SQLite.SQLite",
@@ -24,6 +26,8 @@ $packages = @(
     "BurntSushi.ripgrep.MSVC",
     "GnuWin32.Grep",
     "GnuWin32.Zip",
+    "JesseDuffield.lazygit",
+    "JesseDuffield.Lazydocker",
     "Amazon.AWSCLI"
 )
 
@@ -42,6 +46,7 @@ Start-Process powershell.exe -ArgumentList "-File .\sanity_check_build_env.ps1"
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP/gtk-devenv.zip"
 Expand-Archive "$env:TEMP/gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP/gtk-devenv.zip"
+
 
 
 
