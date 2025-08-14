@@ -17,6 +17,10 @@ Set-ItemProperty -Path "Registry::HKEY_CURRENT_USER\Control Panel\Colors" -Name 
 # Start button on left
 Set-ItemProperty -Path "Registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "TaskbarAl" -Value 0 -Type "Dword"
 
+# Turn off the "show more" chevron in system tray 
+Set-ItemProperty -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify" -Name "SystemTrayChevronVisibility" -Value 0
+
 # Refresh
 Stop-Process -Name explorer -Force; Start-Process explorer
+
 
