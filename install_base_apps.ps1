@@ -39,7 +39,7 @@ foreach ($package in $packages) {
 # Always put git in c:\git\ as a special location
 winget install --accept-source-agreements --accept-package-agreements --silent -e --id Git.Git --location c:\git
 
-# Run build env/nvm selectr in new Window to pick up new %PATH% etc
+# Run build env/nvm select in new window to pick up new %PATH% etc
 Start-Process powershell.exe -ArgumentList "-File $PSScriptRoot\sanity_check_build_env.ps1"
 # Run again on next boot *just in case*
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce" -Name $(New-Guid) -Value "powershell.exe -ExecutionPolicy Bypass -File '$PSScriptRoot\sanity_check_build_env.ps1'"
