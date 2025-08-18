@@ -42,7 +42,7 @@ winget install --accept-source-agreements --accept-package-agreements --silent -
 # Run build env/nvm selectr in new Window to pick up new %PATH% etc
 Start-Process powershell.exe -ArgumentList "-File $PSScriptRoot\sanity_check_build_env.ps1"
 # Run again on next boot *just in case*
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce" -Name "Bootstrap.BuildEnv" -Value "powershell.exe -ExecutionPolicy Bypass -File '$PSScriptRoot\sanity_check_build_env.ps1'"
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce" -Name $(New-Guid) -Value "powershell.exe -ExecutionPolicy Bypass -File '$PSScriptRoot\sanity_check_build_env.ps1'"
 
 # These are the tools required to compile canvas in your nvm env
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP\gtk-devenv.zip"
