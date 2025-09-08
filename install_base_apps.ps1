@@ -3,7 +3,7 @@
 Write-Host "Setting up base build/run apps"
 
 # VS Code Build Tools
-winget install --accept-source-agreements --accept-package-agreements --silent --source winget --id Microsoft.VisualStudio.2022.Community --override "--passive --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --add Microsoft.VisualStudio.Component.Windows10SDK --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64 --add Microsoft.VisualStudio.Component.VC.Modules.x86.x64 --add Microsoft.VisualStudio.Component.VC.Llvm.ClangToolset --add Microsoft.VisualStudio.Component.VC.Llvm.Clang"
+winget install --accept-source-agreements --accept-package-agreements --silent --source winget --id Microsoft.VisualStudio.2022.Community --override "--passive --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --add Microsoft.VisualStudio.Component.Windows10SDK --add Microsoft.VisualStudio.Component.Windows11SDK.26100 --add Microsoft.VisualStudio.Component.VC.Tools.ARM64 --add Microsoft.VisualStudio.Component.VC.Modules.x86.x64"
 
 $packages = @(
     "Microsoft.WindowsTerminal",
@@ -48,6 +48,7 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP\gtk-devenv.zip"
 Expand-Archive "$env:TEMP\gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP\gtk-devenv.zip"
+
 
 
 
