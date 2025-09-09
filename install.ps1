@@ -13,7 +13,6 @@ function New-Shortcut-To-Powershell-Script-On-Desktop {
     $desktopPath = [System.Environment]::GetFolderPath('Desktop')
     $shortcutPath = Join-Path $desktopPath "$ShortcutName.lnk"
 
-    # Create a WScript.Shell object
     $WshShell = New-Object -comObject WScript.Shell
 
     $shortcut = $WshShell.CreateShortcut($shortcutPath)
