@@ -26,6 +26,10 @@ $packages = @(
     "BurntSushi.ripgrep.MSVC",
     "GnuWin32.Grep",
     "GnuWin32.Zip",
+    "direnv.direnv",
+    "mvdan.shfmt",
+    "TerraformLinters.tflint",
+    "ImageMagick.ImageMagick",
     "JesseDuffield.lazygit",
     "JesseDuffield.Lazydocker",
     "Amazon.AWSCLI"
