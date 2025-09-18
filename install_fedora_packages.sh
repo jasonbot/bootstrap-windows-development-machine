@@ -6,7 +6,7 @@ sudo dnf group install -y development-tools
 sudo dnf install -y awscli cairo cairo-devel containerd docker-cli \
                     fzf gcc-c++ git golang jq make python3-setuptools \
                     ripgrep shasum tcl-devel tmux vim zsh git golang \
-                    ImageMagick
+                    ImageMagick rust
 
 # NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
