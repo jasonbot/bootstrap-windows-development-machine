@@ -16,7 +16,7 @@ $packages = @(
     "CoreyButler.NVMforWindows",
     "Rustlang.Rustup",
     "GoLang.Go",
-    "Python.Python.3.13",
+    "Python.Python.3.14",
     "astral-sh.uv",
     "RubyInstallerTeam.Ruby.3.4",
     "jqlang.jq",
@@ -52,6 +52,7 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP\gtk-devenv.zip"
 Expand-Archive "$env:TEMP\gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP\gtk-devenv.zip"
+
 
 
 
