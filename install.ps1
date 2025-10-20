@@ -36,7 +36,6 @@ New-Shortcut-To-Powershell-Script-On-Desktop -ShortcutName "Setup NVM Etc" -Scri
 
 if ($IWorkHere) {
     & "$PSScriptRoot\install_fonts.ps1"
-    &" $PSScriptRoot\install_zed.ps1"
 }
 
 if (!$ThisIsAVM) {

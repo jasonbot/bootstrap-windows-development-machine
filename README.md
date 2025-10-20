@@ -37,4 +37,4 @@ If you are my coworker, this installs some more work-related software.
 
 If you are bootstrapping a Virtual Machine or do not wish to enable virtualization tools.
 
-This repo uses [Pirafrank/unoffical Windows Zed builds](https://github.com/pirafrank/zed_unofficial_win_builds/) and [Win11Debloat](https://github.com/Raphire/Win11Debloat) for some of its functionality.
+This repo uses [Win11Debloat](https://github.com/Raphire/Win11Debloat) for some of its functionality.

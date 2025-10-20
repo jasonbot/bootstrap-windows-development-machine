@@ -32,7 +32,8 @@ $packages = @(
     "ImageMagick.ImageMagick",
     "JesseDuffield.lazygit",
     "JesseDuffield.Lazydocker",
-    "Amazon.AWSCLI"
+    "Amazon.AWSCLI",
+    "ZedIndustries.Zed"
 )
 
 foreach ($package in $packages) {
@@ -52,9 +53,3 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
 Invoke-WebRequest https://ftp.gnome.org/pub/GNOME/binaries/win64/gtk+/2.22/gtk+-bundle_2.22.1-20101229_win64.zip -OutFile "$env:TEMP\gtk-devenv.zip"
 Expand-Archive "$env:TEMP\gtk-devenv.zip" -DestinationPath C:\GTK
 Remove-Item "$env:TEMP\gtk-devenv.zip"
-
-
-
-
-
-
