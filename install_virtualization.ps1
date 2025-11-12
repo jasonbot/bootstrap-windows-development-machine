@@ -11,7 +11,7 @@ foreach ($package in $packages) {
 }
 
 Write-Host "Enabling/Installing Windows Sandbox"
-Enable-WindowsOptionalFeature -Online -FeatureName "Containers-DisposableClientVM" -All
+Enable-WindowsOptionalFeature -Online -FeatureName "Containers-DisposableClientVM" -All -NoRestart
 
 Write-Host "Enabling/Installing a Fedora WSL machine"
 
@@ -23,3 +23,4 @@ if (-not ($wslDistros -contains $targetDistro)) {
     wsl --set-default $targetDistro
     wsl --distribution $targetDistro --exec "./install_fedora_packages.sh"
 }
+
