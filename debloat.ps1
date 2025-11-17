@@ -5,4 +5,5 @@ Write-Host "Debloating OS"
 
 & ([scriptblock]::Create((Invoke-RestMethod "https://debloat.raphi.re/"))) -Silent -RunDefaults	-ClearStart	-HideSearchTb -DisableWidgets -TaskbarAlignLeft -ExplorerToThisPC -DisableLockscreenTips -DisableDesktopSpotlight
 
-winget uninstall Microsoft.OneDrive
+winget --accept-source-agreements --accept-package-agreements --silent uninstall Microsoft.OneDrive
+
