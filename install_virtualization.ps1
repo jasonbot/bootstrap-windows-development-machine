@@ -12,6 +12,8 @@ foreach ($package in $packages) {
 
 Write-Host "Enabling/Installing Windows Sandbox"
 Enable-WindowsOptionalFeature -Online -FeatureName "Containers-DisposableClientVM" -All -NoRestart
+Write-Host "Adding Context Menus for Windows Sandbox"
+irm https://raw.githubusercontent.com/Joly0/Run-in-Sandbox/master/Install_Run-in-Sandbox.ps1 | iex
 
 Write-Host "Enabling/Installing a Fedora WSL machine"
 
@@ -23,4 +25,5 @@ if (-not ($wslDistros -contains $targetDistro)) {
     wsl --set-default $targetDistro
     wsl --distribution $targetDistro --exec "./install_fedora_packages.sh"
 }
+
 
