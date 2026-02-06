@@ -19,7 +19,7 @@ Remove-Item -Path function:Read-Host
 
 Write-Host "Enabling/Installing a Fedora WSL machine"
 
-$targetDistro = "FedoraLinux-42"
+$targetDistro = "FedoraLinux-43"
 $wslDistros = wsl.exe --list --quiet
 if (-not ($wslDistros -contains $targetDistro)) {
     Write-Host "Need to install $targetDistro in WSL"
@@ -27,6 +27,7 @@ if (-not ($wslDistros -contains $targetDistro)) {
     wsl --set-default $targetDistro
     wsl --distribution $targetDistro --exec "./install_fedora_packages.sh"
 }
+
 
 
 
