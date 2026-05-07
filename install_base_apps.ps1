@@ -20,6 +20,7 @@ $packages = @(
     "Microsoft.WindowsSDK.10.0.26100",
     "CoreyButler.NVMforWindows",
     "Microsoft.Sysinternals.Suite",
+    "Microsoft.WinDbg",
     "Rustlang.Rustup",
     "GoLang.Go",
     "Python.Python.3.14",
