@@ -28,7 +28,6 @@ Write-Host "Here we go"
 
 & "$PSScriptRoot\set_up_winget.ps1"
 & "$PSScriptRoot\debloat.ps1"
-& "$PSScriptRoot\install_base_apps.ps1"
 & "$PSScriptRoot\desktop_theme.ps1"
 & "$PSScriptRoot\install_base_apps.ps1"
 Start-Process powershell.exe -ArgumentList "-NoExit -File $PSScriptRoot\sanity_check_build_env.ps1"
