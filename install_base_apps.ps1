@@ -35,7 +35,7 @@ $packages = @(
     "GnuWin32.Zip",
     "direnv.direnv",
     "mvdan.shfmt",
-    "TerraformLinters.tflint",
+    "jdx.mise",
     "ImageMagick.ImageMagick",
     "JesseDuffield.lazygit",
     "JesseDuffield.Lazydocker",
