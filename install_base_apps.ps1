@@ -48,11 +48,11 @@ $packages = @(
 
 foreach ($package in $packages) {
     Write-Host "Installing $package..."
-    winget install --accept-source-agreements --accept-package-agreements --silent -e --id $package
+    winget install --accept-source-agreements --accept-package-agreements --silent --source winget -e --id $package
 }
 
 # Always put git in c:\git\ as a special location
-winget install --accept-source-agreements --accept-package-agreements --silent -e --id Git.Git --location c:\git
+winget install --accept-source-agreements --accept-package-agreements --silent --source winget -e --id Git.Git --location c:\git
 
 # Run build env/nvm select in new window to pick up new %PATH% etc
 Start-Process powershell.exe -ArgumentList "-File $PSScriptRoot\sanity_check_build_env.ps1"

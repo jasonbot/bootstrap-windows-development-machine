@@ -7,7 +7,7 @@ $packages = @(
 Write-Host "Enabling/Installing Virtualization Packages"
 foreach ($package in $packages) {
     Write-Host "Installing $package..."
-    winget install --accept-source-agreements --accept-package-agreements --silent -e --id $package
+    winget install --accept-source-agreements --accept-package-agreements --silent --source winget -e --id $package
 }
 
 Write-Host "Enabling/Installing Windows Sandbox"
