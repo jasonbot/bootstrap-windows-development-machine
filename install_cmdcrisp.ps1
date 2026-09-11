@@ -32,6 +32,16 @@ function Add-ToUserEnvironment {
 
 Write-Host "Installing fake mac command line tools"
 
+# winget put Go in the registry PATH, but this process's environment predates
+# that install. Refresh it or every `go` below fails with "go is not
+# recognized" (and the uncaught `go env GOPATH` at the end then kills the
+# bootstrap).
+$env:PATH = [Environment]::GetEnvironmentVariable('PATH','Machine') + ';' + [Environment]::GetEnvironmentVariable('PATH','User')
+if (-not (Get-Command go -ErrorAction SilentlyContinue)) {
+    Write-Host "Go is not installed yet - skipping cmdcrisp tools" -ForegroundColor Yellow
+    return
+}
+
 foreach ($cmd in $Commands) {
     Install-Tool -CmdName $cmd
 }
